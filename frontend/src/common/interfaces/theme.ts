@@ -50,6 +50,7 @@ interface colors {
 
 interface input {
     background: string
+    background_hover: string
     text: string
     text_hover: string
     border: string

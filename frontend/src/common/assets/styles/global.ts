@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components'
+import styled, { createGlobalStyle } from 'styled-components'
 import themeProps from '../../interfaces/theme'
 
 export const GlobalStyle = createGlobalStyle<{ theme: themeProps }>`
@@ -10,19 +10,39 @@ export const GlobalStyle = createGlobalStyle<{ theme: themeProps }>`
   }
 body{
 	  background: ${({ theme: { colors } }) => colors.background.body};
-    background-size:cover;
-    background-attachment:fixed;
-    background-repeat:repeat;
     min-height:100vh;
     overflow:auto;
-    display:flex;
-    justify-content:center;
-    align-items:center;
+    overflow-x:hidden;
+
 
 	}
-  input{
-    background-color: ${({ theme: { colors } }) => colors.input.default.background};
-    border-color: ${({ theme: { colors } }) => colors.input.default.border};
-    color: ${({ theme: { colors } }) => colors.input.default.text};
-  }
+
+`
+export const Content = styled.main`
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+`
+export const BgNeural = styled.div`
+    position: fixed;
+    height: 100vh;
+    width: 50vw;
+    top: 0;
+    left: 0;
+    z-index: -100;
+`
+export const BgElipse = styled.div`
+    height: 80vh;
+    width: 150vw;
+    z-index: -101;
+    background-color: #dec0f1;
+    border-radius: 100%;
+    position: absolute;
+    left: calc(75vw / 2 * -1);
+
+    top: -25vh;
+    filter: blur(100px);
 `

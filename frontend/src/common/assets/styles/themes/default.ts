@@ -40,17 +40,19 @@ const dark: themeProps = {
         },
         input: {
             default: {
-                background: '#0B0A0A',
-                text: '#fff',
-                text_hover: '#b96c18',
-                border: '#9B9B9B',
-                border_hover: '#b96c18',
-                shadow_hover: '#585858',
+                background: '#F8EDFF',
+                background_hover: '#f8f4fa',
+                text: '#0094C6',
+                text_hover: '#0094C6',
+                border: 'transparent',
+                border_hover: 'transparent',
+                shadow_hover: 'transparent',
             },
         },
         button: {
             default: {
                 background: '#0B0A0A',
+                background_hover: '#0B0A0A',
                 text: '#fff',
                 text_hover: '#b96c18',
                 border: '#9B9B9B',
