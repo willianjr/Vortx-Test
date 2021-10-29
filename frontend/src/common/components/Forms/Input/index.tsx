@@ -10,7 +10,7 @@ declare interface InputProps {
     type?: 'text' | 'password' | 'email' | 'tel' | undefined
 }
 
-export const Default = ({ type, label, loading, icon, ...props }: InputProps): JSX.Element => {
+export const Default = ({ type, label, ...props }: InputProps): JSX.Element => {
     return (
         <>
             <S.FormGroup>
