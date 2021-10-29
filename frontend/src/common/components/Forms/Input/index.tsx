@@ -15,7 +15,7 @@ export const Default = ({ type, label, loading, icon, ...props }: InputProps): J
         <>
             <S.FormGroup>
                 {label && <S.FormLabel>{label}</S.FormLabel>}
-                <S.Input value={999} id="teste" type={type} {...props} />
+                <S.Input id="teste" type={type} {...props} />
             </S.FormGroup>
         </>
     )

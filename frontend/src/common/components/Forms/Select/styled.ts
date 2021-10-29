@@ -30,6 +30,7 @@ export const FormLabel = styled(Label)`
     text-transform: uppercase;
     font-size: 15px;
     line-height: 27px;
+    background-color: transparent !important;
     ::after,
     ::before {
         content: '';
@@ -49,7 +50,7 @@ export const Input = styled(Select)`
     color: ${({ theme: { colors } }) => colors.input.default.text};
     transition: all 0.3s linear;
     border-radius: 30px;
-    padding-top: 30px;
+    padding-top: 15px;
     text-align: center;
     font-size: 40px;
     font-weight: bold;

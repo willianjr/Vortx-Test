@@ -51,7 +51,7 @@ export const Input = styled(Control)`
     color: ${({ theme: { colors } }) => colors.input.default.text};
     transition: all 0.3s linear;
     border-radius: 30px;
-    padding-top: 30px;
+    padding-top: 15px;
     text-align: center;
     font-size: 40px;
     font-weight: bold;

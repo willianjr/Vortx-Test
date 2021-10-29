@@ -6,12 +6,13 @@ declare interface InputProps {
     placeholder?: string
     loading?: boolean
     children: ReactNode
+    label?: string
 }
 
-export const Default = ({ children, ...props }: InputProps): JSX.Element => {
+export const Default = ({ label, children, ...props }: InputProps): JSX.Element => {
     return (
         <S.FormGroup>
-            <S.FormLabel>Origem</S.FormLabel>
+            {label && <S.FormLabel {...props}>{label}</S.FormLabel>}
             <S.Input {...props}>{children}</S.Input>
         </S.FormGroup>
     )

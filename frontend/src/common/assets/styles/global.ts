@@ -6,8 +6,15 @@ export const GlobalStyle = createGlobalStyle<{ theme: themeProps }>`
     font-family:${({ theme: { fonts } }) => fonts.default.family};
     font-size:${({ theme: { fonts } }) => fonts.default.size};
     box-sizing:border-box;
+    ::selection {
+        color: #FFF;
+        background: ${({ theme: { colors } }) => colors.primary.purple};;
+    }
+    ::-moz-selection { /* Code for Firefox */
+      color: #FFF;
+      background: ${({ theme: { colors } }) => colors.primary.purple}
 
-  }
+    }
 body{
 	  background: ${({ theme: { colors } }) => colors.background.body};
     min-height:100vh;
@@ -15,8 +22,9 @@ body{
     overflow-x:hidden;
 
 
-	}
 
+	}
+  }
 `
 export const Content = styled.main`
     width: 100vw;

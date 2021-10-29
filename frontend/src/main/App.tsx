@@ -1,14 +1,17 @@
 import React from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css'
+import { Router } from 'react-router'
+import { createBrowserHistory } from 'history'
 import { ThemeProvider } from 'styled-components'
-import { GlobalStyle, BgElipse, BgNeural, Content } from '../common/assets/styles/global'
-import Themes from '../common/assets/styles/themes'
+import { GlobalStyle, BgElipse, BgNeural } from '../common/assets/styles/global'
 
-import { Input, Select } from '../common/components'
-import logo from '../common/assets/images/LOGOMARCA_VXTEL.svg'
+import { Routes } from './Routes'
+import Themes from '../common/assets/styles/themes'
+import { Rodape } from '../common/components'
 import bgNeural from '../common/assets/images/bgNeural.svg'
 
 function App() {
+    const history = createBrowserHistory()
     return (
         <ThemeProvider theme={Themes.default}>
             <GlobalStyle />
@@ -16,15 +19,10 @@ function App() {
             <BgNeural>
                 <img src={bgNeural} />
             </BgNeural>
-            <Content>
-                <img src={logo} width={406} className="App-logo" alt="logo" />
-                <Input placeholder={`Duração:Min`} label={`Duração:Min`} />
-                <Select>
-                    <option value={30}>Plano Mais 30</option>
-                    <option value={60}>Plano Mais 60</option>
-                    <option value={120}>Plano Mais 120</option>
-                </Select>
-            </Content>
+            <Router history={history}>
+                <Routes />
+            </Router>
+            <Rodape>Todos os Direitos</Rodape>
         </ThemeProvider>
     )
 }
