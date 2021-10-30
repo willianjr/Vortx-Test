@@ -15,12 +15,14 @@ export const GlobalStyle = createGlobalStyle<{ theme: themeProps }>`
       background: ${({ theme: { colors } }) => colors.primary.purple}
 
     }
-body{
-	  background: ${({ theme: { colors } }) => colors.background.body};
-    min-height:100vh;
-    overflow:auto;
-    overflow-x:hidden;
 
+html,body{
+	  background: ${({ theme: { colors } }) => colors.background.body};
+
+
+     overflow-x: hidden;
+     height:100vh;
+    scroll-snap-type: y mandatory;
 
 
 	}

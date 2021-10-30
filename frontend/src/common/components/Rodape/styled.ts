@@ -11,6 +11,7 @@ export const Rodape = styled.footer`
     height: 147px;
     transform: rotate(-5deg);
     transform-origin: top right;
+    display: none;
 `
 export const Info = styled.aside`
     display: none;
