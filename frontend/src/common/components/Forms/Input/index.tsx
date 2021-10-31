@@ -1,21 +1,18 @@
 import React from 'react'
-
+import { FormControlProps } from 'react-bootstrap'
 import * as S from './styled'
 
-declare interface InputProps {
-    icon?: any
-    placeholder?: string
+declare interface InputProps extends FormControlProps {
     label?: string
     loading?: boolean
-    type?: 'text' | 'password' | 'email' | 'tel' | undefined
 }
 
-export const Default = ({ type, label, ...props }: InputProps): JSX.Element => {
+export const Default = ({ label, ...props }: InputProps): JSX.Element => {
     return (
         <>
-            <S.FormGroup>
+            <S.FormGroup {...props}>
                 {label && <S.FormLabel>{label}</S.FormLabel>}
-                <S.Input id="teste" type={type} {...props} />
+                <S.Input {...props} />
             </S.FormGroup>
         </>
     )

@@ -2,6 +2,7 @@ import styled, { createGlobalStyle } from 'styled-components'
 import themeProps from '../../interfaces/theme'
 
 export const GlobalStyle = createGlobalStyle<{ theme: themeProps }>`
+
   *{
     font-family:${({ theme: { fonts } }) => fonts.default.family};
     font-size:${({ theme: { fonts } }) => fonts.default.size};
@@ -15,14 +16,19 @@ export const GlobalStyle = createGlobalStyle<{ theme: themeProps }>`
       background: ${({ theme: { colors } }) => colors.primary.purple}
 
     }
+    html{ scroll-snap-type: y mandatory;
+      scroll-behavior: smooth;
 
-html,body{
+    }
+body{
 	  background: ${({ theme: { colors } }) => colors.background.body};
 
 
      overflow-x: hidden;
-     height:100vh;
-    scroll-snap-type: y mandatory;
+     min-height:100vh;
+     height:100%;
+     padding-bottom:5rem;
+
 
 
 	}
