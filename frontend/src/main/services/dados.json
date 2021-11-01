@@ -45,5 +45,19 @@
                 }
             ]
         }
+    ],
+    "planos": [
+        {
+            "nome": "FaleMais 30",
+            "franquia": 30
+        },
+        {
+            "nome": "FaleMais 60",
+            "franquia": 60
+        },
+        {
+            "nome": "FaleMais 120",
+            "franquia": 120
+        }
     ]
 }
