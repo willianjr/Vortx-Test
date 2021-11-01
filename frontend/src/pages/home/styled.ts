@@ -1,11 +1,9 @@
 import styled from 'styled-components'
-import { Select } from '../../common/components'
 
 export const Main = styled.main.attrs(() => ({
     className: 'd-flex flex-column lg-5 px-5 container-md',
 }))`
-    /*min-height: 100vh;*/
-    /*border-bottom:1px solid red;*/
+    min-height: 100vh;
     margin-bottom: 2rem;
     scroll-snap-align: start;
     position: relative;
@@ -39,15 +37,6 @@ export const SubTitulo = styled.span`
     font-size: 18px;
     line-height: 22px;
     margin-top: 0rem;
-`
-export const SelecionePlano = styled(Select)`
-    background-color: ${({ theme: { colors } }) => colors.primary.purple};
-    border-radius: 30px;
-    color: #fff !important;
-    :focus {
-        background-color: ${({ theme: { colors } }) => colors.primary.purple};
-        color: ${({ theme: { colors } }) => colors.input.default.text_hover};
-    }
 `
 
 export const Label = styled.div`

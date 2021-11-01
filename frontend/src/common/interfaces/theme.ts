@@ -36,15 +36,15 @@ interface colors {
     }
     input: {
         default: input
-        alternative?: input
+        secondary?: input
     }
     button: {
         default: button
-        alternative?: button
+        secondary?: button
     }
     link: {
         default: link
-        alternative?: link
+        secondary?: link
     }
 }
 
@@ -72,11 +72,13 @@ interface font {
     family: string
     size: string
     weight: string
+    align: string
 }
 interface fonts {
     light: font
     title: font
     default: font
+    input: font
 }
 
 export default interface themeProps {

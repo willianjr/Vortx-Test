@@ -40,7 +40,7 @@ const Home = (): JSX.Element => {
         ))
     }
     const exibeResult = valorSemPlano > 0 && plano > 0 && destino !== ''
-
+    //console.log(ValorDestino)
     const reset = () => {
         setDestino('0')
         setValorDestino(0.0)
@@ -101,14 +101,14 @@ const Home = (): JSX.Element => {
                 </Row>
                 <Row className={`my-5`}>
                     <Col xs={12} lg={{ span: 4, offset: 4 }}>
-                        <S.SelecionePlano label={`Selecione o Plano`} onChange={(e) => setPlano(+e.target.value)}>
+                        <Select secondary label={`Selecione o Plano`} onChange={(e) => setPlano(+e.target.value)}>
                             <option value={0}>...</option>
                             {BD.planos.map((plano: IPlanos) => (
                                 <option key={plano.franquia} value={plano.franquia}>
                                     {plano.nome}
                                 </option>
                             ))}
-                        </S.SelecionePlano>
+                        </Select>
                     </Col>
                 </Row>
             </S.Main>

@@ -48,6 +48,15 @@ const dark: themeProps = {
                 border_hover: 'transparent',
                 shadow_hover: 'transparent',
             },
+            secondary: {
+                background: '#6E2594',
+                background_hover: '#6E2594',
+                text: '#fff',
+                text_hover: '#fff',
+                border: 'transparent',
+                border_hover: 'transparent',
+                shadow_hover: 'transparent',
+            },
         },
         button: {
             default: {
@@ -74,16 +83,25 @@ const dark: themeProps = {
             family: 'Inter, sans-serif',
             size: '14',
             weight: 'regular',
+            align: 'left',
         },
         light: {
             family: 'Inter, sans-serif',
             size: '14',
             weight: 'regular',
+            align: 'left',
         },
         title: {
             family: 'Inter, sans-serif',
             size: '16',
             weight: 'bold',
+            align: 'left',
+        },
+        input: {
+            family: 'Inter, sans-serif',
+            size: '25px',
+            weight: '900',
+            align: 'center',
         },
     },
 }
