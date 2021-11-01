@@ -4,10 +4,12 @@ export const Main = styled.main.attrs(() => ({
     className: 'd-flex flex-column lg-5 px-5 container-md',
 }))`
     min-height: 100vh;
-    margin-bottom: 2rem;
+    height: 100%;
+    margin-bottom: 3rem;
     scroll-snap-align: start;
     position: relative;
     justify-content: center;
+
     img {
         display: flex;
         align-self: center;
@@ -103,11 +105,12 @@ const Planos = styled.div`
 export const ComPlano = styled(Planos).attrs(() => ({
     className: 'col-md-12',
 }))`
-    background-color: ${({ theme: { colors } }) => colors.primary.purple};
     --height: 390px;
+    background-color: ${({ theme: { colors } }) => colors.primary.purple};
     height: var(--height);
     @media (max-width: 768px) {
         height: calc(var(--height) - 100px);
+        margin-top: 3.5rem;
     }
 
     ${Label} {
