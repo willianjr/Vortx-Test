@@ -86,7 +86,7 @@ const Home = (): JSX.Element => {
     const calcularValores = () => {
         const excedente = plano > tempo ? 0 : tempo - plano
         setValorSemPlano(tempo * +valorTarifa)
-        setValorPlano(excedente * +valorTarifa)
+        setValorPlano(excedente * +valorTarifa * 1.1)
         scrollAndAnimation()
     }
     const controlScrollWindow = () => {
