@@ -19,21 +19,20 @@ export const GlobalStyle = createGlobalStyle<{ theme: themeProps }>`
   }
    html{
      scroll-snap-type: y mandatory;
-      scroll-behavior: smooth;
+     scroll-behavior: smooth;
 
     }
   body{
 	  background: ${({ theme: { colors } }) => colors.background.body};
-     overflow-x: hidden;
+
      min-height:100vh;
-     height:100%;
-     padding-bottom:5rem;
+
+
 	}
+
 
 `
 export const Content = styled.main`
-    width: 100vw;
-    min-height: 100vh;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -49,13 +48,12 @@ export const BgNeural = styled.div`
 `
 export const BgElipse = styled.div`
     height: 80vh;
-    width: 150vw;
+    width: 100vw;
     z-index: -101;
     background-color: #dec0f1;
     border-radius: 100%;
-    position: absolute;
-    left: calc(75vw / 2 * -1);
-
+    position: fixed;
+    left: 0%;
     top: -25vh;
     filter: blur(100px);
 `

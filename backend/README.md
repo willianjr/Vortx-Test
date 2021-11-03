@@ -1,10 +1,15 @@
+> [[Voltar]](../README.md)
+
+***
+<p align="center">
+  <img src="../_LAYOUT/Marca/LOGOMARCA_VXTEL.svg" width="300" />
+</p>
+
 # VX TEL - backend
 
 Projeto Teste para VORTX
 
 > O Documento abaixo terá uma breve descrição do projeto
-
-### #BackEnd
 
 _Tecnologias_
 

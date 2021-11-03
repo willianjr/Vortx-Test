@@ -14,33 +14,33 @@ export const FormGroup = styled(Group)`
 export const FormLabel = styled(Label)<themeProps>`
     ${LabelInputs}
     color: ${(props) =>
-        props.secondary
+        props.secondary === 'true'
             ? ({ theme: { colors } }) => colors.input.secondary.text
             : ({ theme: { colors } }) => colors.input.default.text};
 
     ::before,
     ::after {
         border-top: ${(props) =>
-            props.secondary
+            props.secondary === 'true'
                 ? ({ theme: { colors } }) => colors.input.secondary.text
                 : ({ theme: { colors } }) => colors.input.default.text};
     }
 `
 export const Input = styled(Select)<themeProps>`
     --colorText: ${(props) =>
-        props.secondary
+        props.secondary === 'true'
             ? ({ theme: { colors } }) => colors.input.secondary.text
             : ({ theme: { colors } }) => colors.input.default.text};
     ${Inputs}
     -webkit-appearance: none;
     -moz-appearance: none;
     background-color: ${(props) =>
-        props.secondary
+        props.secondary === 'true'
             ? ({ theme: { colors } }) => colors.input.secondary.background
             : ({ theme: { colors } }) => colors.input.default.background};
     color: var(--colorText);
     border-color: ${(props) =>
-        props.secondary
+        props.secondary === 'true'
             ? ({ theme: { colors } }) => colors.input.secondary.border
             : ({ theme: { colors } }) => colors.input.default.border};
 
@@ -56,15 +56,15 @@ export const Input = styled(Select)<themeProps>`
     background-repeat: no-repeat;
     :focus {
         background-color: ${(props) =>
-            props.secondary
+            props.secondary === 'true'
                 ? ({ theme: { colors } }) => colors.input.secondary.background_hover
                 : ({ theme: { colors } }) => colors.input.default.background_hover};
         color: ${(props) =>
-            props.secondary
+            props.secondary === 'true'
                 ? ({ theme: { colors } }) => colors.input.secondary.text_hover
                 : ({ theme: { colors } }) => colors.input.default.text_hover};
         border-color: ${(props) =>
-            props.secondary
+            props.secondary === 'true'
                 ? ({ theme: { colors } }) => colors.input.secondary.border_hover
                 : ({ theme: { colors } }) => colors.input.default.border_hover};
 

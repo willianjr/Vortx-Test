@@ -7,7 +7,7 @@ declare interface InputSelect extends FormControlProps {
     loading?: boolean
     children?: ReactNode
     label?: string
-    secondary?: boolean
+    secondary?: string
 }
 
 export const Default = ({ secondary, label, children, ...props }: InputSelect): JSX.Element => {

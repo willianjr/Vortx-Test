@@ -5,7 +5,6 @@ export const Main = styled.main.attrs(() => ({
 }))`
     min-height: 100vh;
     height: 100%;
-    margin-bottom: 3rem;
     scroll-snap-align: start;
     position: relative;
     justify-content: center;
@@ -28,6 +27,10 @@ export const Info = styled.aside`
         margin: 1rem 0;
         padding: 0.5rem;
     }
+    &.magictime {
+        -webkit-animation-duration: 2s;
+        animation-duration: 2s;
+    }
 `
 export const Titulo = styled.h3`
     color: ${({ theme: { colors } }) => colors.primary.purple};
@@ -41,7 +44,9 @@ export const SubTitulo = styled.span`
     margin-top: 0rem;
 `
 
-export const Label = styled.div`
+export const Label = styled.div.attrs(() => ({
+    className: '',
+}))`
     max-width: 50%;
     width: 50%;
     height: 145px;
@@ -102,9 +107,7 @@ const Planos = styled.div`
     }
 `
 
-export const ComPlano = styled(Planos).attrs(() => ({
-    className: 'col-md-12',
-}))`
+export const ComPlano = styled(Planos)`
     --height: 390px;
     background-color: ${({ theme: { colors } }) => colors.primary.purple};
     height: var(--height);
@@ -118,14 +121,21 @@ export const ComPlano = styled(Planos).attrs(() => ({
         ::after {
             background-color: ${({ theme: { colors } }) => colors.primary.gold};
         }
+        svg {
+            position: absolute;
+            top: 0;
+            left: 50%;
+        }
     }
     ${Valor} {
         color: ${({ theme: { colors } }) => colors.primary.gold};
     }
+    &.magictime {
+        -webkit-animation-duration: 1s;
+        animation-duration: 1s;
+    }
 `
-export const SemPlano = styled(Planos).attrs(() => ({
-    className: 'col-md-12',
-}))`
+export const SemPlano = styled(Planos)`
     background-color: ${({ theme: { colors } }) => colors.primary.blue};
     --height: 290px;
     height: var(--height);
@@ -140,6 +150,10 @@ export const SemPlano = styled(Planos).attrs(() => ({
     }
     ${Valor} {
         color: #fff;
+    }
+    &.magictime {
+        -webkit-animation-duration: 1s;
+        animation-duration: 1s;
     }
 `
 
@@ -183,5 +197,28 @@ export const ButtonAssinar = styled.button`
     }
     @media (max-width: 768px) {
         padding: 1.5rem;
+    }
+`
+export const ImagemTwo = styled.img`
+    margin-bottom: 3rem;
+    &.magictime {
+        -webkit-animation-duration: 2s;
+        animation-duration: 2s;
+    }
+`
+export const Voltar = styled.div`
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    width: 2.2rem;
+    height: 2.2rem;
+    svg {
+        width: 2.2rem;
+        height: 2.2rem;
+        color: ${({ theme: { colors } }) => colors.primary.purple};
+    }
+    &.magictime {
+        -webkit-animation-duration: 2s;
+        animation-duration: 2s;
     }
 `

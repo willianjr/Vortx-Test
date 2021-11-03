@@ -1,5 +1,7 @@
 import React from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css'
+import 'magic.css/dist/magic.min.css'
+
 import { Router } from 'react-router'
 import { createBrowserHistory } from 'history'
 import { ThemeProvider } from 'styled-components'
